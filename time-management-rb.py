@@ -1,6 +1,6 @@
 from time import *
 # Health Management System
-client_list = {1: "Harry", 2: "Rohan", 3: "Hammad",4:"deepak"}
+client_list = {1: "Deepak", 2: "Shubham",3:"Anand"}
 lock_list = {1: "Exercise", 2: "Diet"}
 
 
