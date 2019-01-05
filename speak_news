@@ -1,0 +1,86 @@
+# import requests
+# url = ('https://newsapi.org/v2/top-headlines?'
+#        'country=us&'
+#        'apiKey=532eba1a7f924017a8bebf0b40f8722b')
+# response = requests.get(url)
+# a=response.json()
+# print(a["author"])
+
+# from newsapi.articles import
+# a = Articles(API_KEY='532eba1a7f924017a8bebf0b40f8722b')
+# data = a.get(source="bbc-news", sort_by='top')
+
+# import requests
+# url = ('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=532eba1a7f924017a8bebf0b40f8722b')
+# response = requests.get(url)
+# print(response.json()['content'])
+# dict1={'1':'titile','2':'description'}
+from newsapi import NewsApiClient
+
+newsapi = NewsApiClient(api_key='532eba1a7f924017a8bebf0b40f8722b')
+
+top_headlines = newsapi.get_top_headlines(
+                                          sources='google-news-in',
+                                          language='en')
+print(top_headlines)
+article = top_headlines["articles"]
+list1 = []
+a=input("If you want to listen title of the news then write title\nfor description of the news write description \n")
+for i in article:
+    if(a=="title"):
+        list1.append(i[f"{a}"])
+    elif(a=="description"):
+        list1.append(i[f"{a}"])
+    else:
+        print("wrong input plz write (title or description) ")
+
+
+# for j in range(len(list1)):
+#     print(f"{j + 1} {list1[j]}")
+#
+#
+# #
+# print("hello now we are starting for another program")
+# import requests
+#
+#
+# def NewsFromBBC():
+#     # BBC news api
+#     main_url = "https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=532eba1a7f924017a8bebf0b40f8722b"
+#
+#     # fetching data in json format
+#     open_bbc_page = requests.get(main_url).json()
+#     print(type(open_bbc_page))
+#     print(open_bbc_page)
+#
+#     # getting all articles in a string article
+#     article = open_bbc_page["articles"]
+#     print(type(article))
+#     print(article)
+#
+#     # empty list which will
+#     # contain all trending news
+#     results = []
+#
+#     for ar in article:
+#         results.append(ar["title"])
+#
+#     for i in range(len(results)):
+#         # printing all trending news
+#         print(i + 1, results[i])
+#
+#     # Driver Code
+#
+#
+# if __name__ == '__main__':
+#     # function call
+#     NewsFromBBC()
+
+
+# def speak(str):
+#     from win32com.client import Dispatch
+#     speak=Dispatch("SAPI.SpVoice")
+#     speak.Speak(str)
+#
+# a=["hello bhai","kya ho rha hai"]
+# speak(a)
