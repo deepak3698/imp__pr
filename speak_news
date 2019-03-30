@@ -1,23 +1,23 @@
 # import requests
 # url = ('https://newsapi.org/v2/top-headlines?'
 #        'country=us&'
-#        'apiKey=532eba1a7f924017a8bebf0b40f8722b')
+#        'apiKey=#########')
 # response = requests.get(url)
 # a=response.json()
 # print(a["author"])
 
 # from newsapi.articles import
-# a = Articles(API_KEY='532eba1a7f924017a8bebf0b40f8722b')
+# a = Articles(API_KEY='###########')
 # data = a.get(source="bbc-news", sort_by='top')
 
 # import requests
-# url = ('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=532eba1a7f924017a8bebf0b40f8722b')
+# url = ('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=#########')
 # response = requests.get(url)
 # print(response.json()['content'])
 # dict1={'1':'titile','2':'description'}
 from newsapi import NewsApiClient
 
-newsapi = NewsApiClient(api_key='532eba1a7f924017a8bebf0b40f8722b')
+newsapi = NewsApiClient(api_key='############')
 
 top_headlines = newsapi.get_top_headlines(
                                           sources='google-news-in',
@@ -46,7 +46,7 @@ for i in article:
 #
 # def NewsFromBBC():
 #     # BBC news api
-#     main_url = "https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=532eba1a7f924017a8bebf0b40f8722b"
+#     main_url = "https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=############"
 #
 #     # fetching data in json format
 #     open_bbc_page = requests.get(main_url).json()
